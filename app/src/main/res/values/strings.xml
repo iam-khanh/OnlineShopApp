@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OnlineShopApp</string>
+    <string name="intro_singn">Already have an acount? <font color="#FF34B3">Sign In</font></string>
 </resources>
