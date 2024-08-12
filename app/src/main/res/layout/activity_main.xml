@@ -110,7 +110,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/viewPager2"
+                    android:id="@+id/viewPagerSlider"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_marginTop="8dp"
@@ -282,8 +282,109 @@
                 >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView0"
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|center_vertical"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_1" />
+
+                    <TextView
+                        android:id="@+id/textView123"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Explorer"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageVi"
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|center_vertical"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_2" />
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Cat"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|center_vertical"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_3" />
+
+                    <TextView
+                        android:id="@+id/textView121"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Favorite"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="22dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center|center_vertical"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_4" />
+
+                    <TextView
+                        android:id="@+id/textView124"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="My Order"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
                     android:orientation="vertical">
 
                     <ImageView
@@ -292,18 +393,20 @@
                         android:layout_height="30dp"
                         android:layout_gravity="center|center_vertical"
                         android:layout_marginTop="8dp"
-                        app:srcCompat="@drawable/btn_1" />
+                        app:srcCompat="@drawable/btn_5" />
 
                     <TextView
                         android:id="@+id/textView12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Explorer"
+                        android:layout_marginTop="6dp"
+                        android:text="Profile"
                         android:textAlignment="center"
-                        android:layout_marginTop="8dp"
                         android:textColor="@color/white"
-                        android:textSize="10sp"/>
+                        android:textSize="10sp" />
                 </LinearLayout>
+
+
             </LinearLayout>
         </com.google.android.material.bottomnavigation.BottomNavigationView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
