@@ -9,9 +9,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
+import com.example.onlineshopapp.Activity.Adapter.BestsellerAdapter
+import com.example.onlineshopapp.Activity.Adapter.CategoryAdapter
 
 import com.example.onlineshopapp.Activity.Adapter.SliderAdapter
 import com.example.onlineshopapp.Activity.Model.SliderModel
@@ -33,7 +37,32 @@ class MainActivity : baseActivity() {
         setContentView(binding.root)
 
         initBanner()
+        initCategories()
+        initBestseller()
+
     }
+
+    private fun initBestseller() {
+       binding.progressBarBestSeller.visibility = View.VISIBLE
+        viewModel.bestseller.observe(this, Observer {
+            binding.rvBestSeller.layoutManager = GridLayoutManager(this,2)
+            binding.rvBestSeller.adapter = BestsellerAdapter(it)
+            binding.progressBarBestSeller.visibility = View.GONE
+        })
+        viewModel.LoadBestseller()
+    }
+
+    private fun initCategories() {
+        binding.progressBarCategories.visibility = View.VISIBLE
+        viewModel.categories.observe(this, Observer {
+            binding.rvCatgories.layoutManager =
+                LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
+            binding.rvCatgories.adapter = CategoryAdapter(it)
+            binding.progressBarCategories.visibility = View.GONE
+        })
+        viewModel.LoadCategory()
+    }
+
 
     private fun initBanner() {
         binding.progressBarBanner.visibility = View.VISIBLE
